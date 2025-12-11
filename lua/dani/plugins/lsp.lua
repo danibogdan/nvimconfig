@@ -57,8 +57,8 @@ return{
             })
             vim.lsp.enable('cssls')
 
-            vim.lsp.config('jdtls', { cmd = { 'jdtls' } })
-            vim.lsp.enable('jdtls');
+            --vim.lsp.config('jdtls', { cmd = { 'jdtls' } })
+            --vim.lsp.enable('jdtls');
             --require'lspconfig'.ts_ls.setup{}
             vim.lsp.enable('custom_elements_ls')
 

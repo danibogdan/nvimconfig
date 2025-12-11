@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("dani.plugins", {
+  { import = "dani.core.plugins" },  -- loads everything from lua/dani/core/plugins/*.lua
   checker = {
     enabled = true,
     notify = false,
@@ -19,7 +20,4 @@ require("lazy").setup("dani.plugins", {
   change_detection = {
     notify = false,
   },
-})
-require("lazy").setup({
-  { import = "dani.core.plugins" },  -- loads everything from lua/dani/core/plugins/*.lua
 })
