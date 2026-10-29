@@ -1,10 +1,31 @@
+
+--[[
 return {
-	"rose-pine/neovim",
-        priority = 1000, -- make sure to load this before all the other start plugins
-	name = "rose-pine",
-	config = function()
-		vim.cmd("colorscheme rose-pine")
-	end
+  "catppuccin/nvim",
+  name = "catppuccin",
+  priority = 1000,
+  config = function()
+    vim.cmd.colorscheme("catppuccin")
+  end,
+}
+]]--
+--[[
+return {
+  "rose-pine/neovim",
+  name = "rose-pine",
+  priority = 1000,
+  config = function()
+    vim.opt.termguicolors = true
+
+    require("rose-pine").setup({
+      variant = "main",
+      styles = {
+        transparency = true,
+      },
+    })
+
+    vim.cmd("colorscheme rose-pine")
+  end,
 }
   --[[[
 return {
@@ -51,4 +72,6 @@ return {
     }
     ]]
 -- lua/plugins/rose-pine.lua
-
+-- The Ghostty palette colorscheme is local (colors/ghostty.lua).
+-- Keep the previous plugin configurations above for reference.
+return {}

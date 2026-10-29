@@ -38,7 +38,8 @@ return {
                 "TabLineFill", "TabLine", "TabLineSel"
                 },
 
-                exclude_groups = {}, -- groups you want to keep opaque
+                -- exclude_groups = {}, -- groups you want to keep opaque
+                exclude_groups = { "StatusLine", "StatusLineNC" },
             })
         end,
     },

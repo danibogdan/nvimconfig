@@ -26,7 +26,8 @@ opt.cursorline=true
 
 -- colors
 --
-opt.termguicolors= true
+-- opt.termguicolors= true
+opt.termguicolors = false -- Use Ghostty's terminal palette, including live theme changes.
 opt.background = "dark" --colorschemes wthat can be light or dark wil be made dark
 
 opt.signcolumn = "yes" --show sign column so that text doesn't shift
@@ -40,5 +41,4 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 -- split windows
 opt.splitright = true --split vertical window to the rigth 
 opt.splitbelow = true --split horizontal window to the bottom
-
 

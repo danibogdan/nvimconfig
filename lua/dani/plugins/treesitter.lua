@@ -9,6 +9,9 @@ return {
         -- import nvim-treesitter plugin
         local treesitter = require("nvim-treesitter.configs")
 
+        -- Arduino sketches use C++ syntax while retaining their LSP filetype.
+        vim.treesitter.language.register("cpp", "arduino")
+
         -- configure treesitter
         treesitter.setup({ -- enable syntax highlighting
             highlight = {
@@ -42,6 +45,7 @@ return {
                 "query",
                 "vimdoc",
                 "c",
+                "cpp",
                 "java",
 
             },
